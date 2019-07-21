@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Interface_Telescope_Les_Usines
+ * @subpackage Interface_Telescope_Les_Usines/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's deactivation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    Interface_Telescope_Les_Usines
+ * @subpackage Interface_Telescope_Les_Usines/includes
+ * @author     Antoine HORY <contact@antoinehory.fr>
  */
-class Plugin_Name_Deactivator {
+class Interface_Telescope_Les_Usines_Deactivator {
 
 	/**
 	 * Short Description. (use period)

@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
- * @author     Your Name <email@example.com>
+ * @package    Interface_Telescope_Les_Usines
+ * @subpackage Interface_Telescope_Les_Usines/includes
+ * @author     Antoine HORY <contact@antoinehory.fr>
  */
-class Plugin_Name_i18n {
+class Interface_Telescope_Les_Usines_i18n {
 
 
 	/**
