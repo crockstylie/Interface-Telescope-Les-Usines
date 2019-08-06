@@ -1,25 +1,9 @@
 <?php
 
-/**
- * The public-facing functionality of the plugin.
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    Interface_Telescope_Les_Usines
- * @subpackage Interface_Telescope_Les_Usines/public
- */
+if ( ! defined( 'ABSPATH' ) ) {
+	die;
+}
 
-/**
- * The public-facing functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the public-facing stylesheet and JavaScript.
- *
- * @package    Interface_Telescope_Les_Usines
- * @subpackage Interface_Telescope_Les_Usines/public
- * @author     Antoine HORY <contact@antoinehory.fr>
- */
 class Interface_Telescope_Les_Usines_Public {
 
 	/**
@@ -52,6 +36,20 @@ class Interface_Telescope_Les_Usines_Public {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 
+	}
+
+	/**************
+	 * SHORTCODES *
+	 **************/
+
+	public function gestion_telescope_shortcode(){
+		ob_start();
+		require_once plugin_dir_path( __FILE__ ) . '/partials/interface-telescope-les-usines-public-display.php';
+		$content = ob_get_clean();
+		return $content;
+	}
+	public function gestion_telescope($atts, $content = ""){
+		return do_shortcode($this->gestion_telescope_shortcode());
 	}
 
 	/**

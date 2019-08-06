@@ -70,7 +70,7 @@ class Interface_Telescope_Les_Usines {
 		if ( defined( 'INTERFACE_TELESCOPE_LES_USINES_VERSION' ) ) {
 			$this->version = INTERFACE_TELESCOPE_LES_USINES_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.0.1';
 		}
 		$this->plugin_name = 'interface-telescope-les-usines';
 
@@ -172,6 +172,9 @@ class Interface_Telescope_Les_Usines {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+		// ShortCodes
+		$this->loader->add_shortcode('gestion_telescope', $plugin_public, 'gestion_telescope');
 
 	}
 
