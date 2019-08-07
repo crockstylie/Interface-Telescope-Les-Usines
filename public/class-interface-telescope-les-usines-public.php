@@ -96,6 +96,16 @@ class Interface_Telescope_Les_Usines_Public {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/interface-telescope-les-usines-public.js', array( 'jquery' ), $this->version, false );
 
+		/** Form submit */
+
+		wp_localize_script(
+			$this->plugin_name,
+			'ajax_interface_telescope_les_usines_submit',
+			array(
+				'url' => admin_url( 'admin-ajax.php' ),
+				'nonce' => wp_create_nonce('ajax-nonce')
+			)
+		);
 	}
 
 }

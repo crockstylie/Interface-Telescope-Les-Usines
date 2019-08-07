@@ -1,6 +1,8 @@
 <?php if(current_user_can('administrator')): ?>
-
-  <form action="http://78.206.32.41:8081/motors/goto/eqt/deg" enctype="multipart/form-data" type="POST">
+  <!--IP des usines-->
+  <!--<form action="http://78.206.32.41:8081/motors/goto/eqt/deg" enctype="multipart/form-data" type="POST">-->
+  <!--ip chez Simon J-->
+  <form id="interfaceTelescopeLesUsinesForm">
     <div class="row">
       <div class="col-xs-6">
           <div class="form-group">

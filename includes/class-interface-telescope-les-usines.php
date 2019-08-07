@@ -70,7 +70,7 @@ class Interface_Telescope_Les_Usines {
 		if ( defined( 'INTERFACE_TELESCOPE_LES_USINES_VERSION' ) ) {
 			$this->version = INTERFACE_TELESCOPE_LES_USINES_VERSION;
 		} else {
-			$this->version = '1.0.1';
+			$this->version = '1.0.5';
 		}
 		$this->plugin_name = 'interface-telescope-les-usines';
 
@@ -121,6 +121,9 @@ class Interface_Telescope_Les_Usines {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-interface-telescope-les-usines-public.php';
+
+		/** Form submit */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-interface-telescope-les-usines-submit.php';
 
 		$this->loader = new Interface_Telescope_Les_Usines_Loader();
 
@@ -175,6 +178,10 @@ class Interface_Telescope_Les_Usines {
 
 		// ShortCodes
 		$this->loader->add_shortcode('gestion_telescope', $plugin_public, 'gestion_telescope');
+
+		// Form Submit
+		$interface_telescope_les_usines_ajax_submit = new Interface_Telescope_Les_Usines_Submit($this->get_plugin_name(), $this->get_version());
+		$this->loader->add_action( 'wp_ajax_interface_telescope_les_usines_submit', $interface_telescope_les_usines_ajax_submit, 'interface_telescope_les_usines_submit' );
 
 	}
 
