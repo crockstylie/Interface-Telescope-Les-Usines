@@ -1,18 +1,31 @@
-<?php
+<?php if(current_user_can('administrator')): ?>
 
-/**
- * Provide a public-facing view for the plugin
- *
- * This file is used to markup the public-facing aspects of the plugin.
- *
- * @link       http://example.com
- * @since      1.0.0
- *
- * @package    Interface_Telescope_Les_Usines
- * @subpackage Interface_Telescope_Les_Usines/public/partials
- */
-?>
+  <form action="http://78.206.32.41:8081/motors/goto/eqt/deg" enctype="multipart/form-data" type="POST">
+    <div class="row">
+      <div class="col-xs-6">
+          <div class="form-group">
+            <label for="d">Axe de déclinaison</label>
+            <input type="text" class="form-control" id="d" name="d" placeholder="Déclinaison">
+          </div>
+      </div>
+      <div class="col-xs-6">
+          <div class="form-group">
+            <label for="h">Axe horaire</label>
+            <input type="text" class="form-control" id="h" name="h" placeholder="horaire">
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-group">
+          <button type="submit" name="submit" id="submit" class="btn btn-default">Déplacer le téléscope</button>
+        </div>
+      </div>
+    </div>
+  </form>
 
-<!-- This file should primarily consist of HTML with a little bit of PHP. -->
+<?php else: ?>
 
-<h1>COCO L'ASTICOT</h1>
+  <h2>Vous devez posséder un compte administrateur pour voir ce contenu.</h2>
+
+<?php endif; ?>
