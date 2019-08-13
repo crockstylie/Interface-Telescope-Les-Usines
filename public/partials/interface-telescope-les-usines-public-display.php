@@ -18,7 +18,7 @@
               <button type="button" class="btn btn-secondary btn-sm"><i class="fas fa-step-backward"></i></button>
             </div>
             <div class="input-group">
-              <input type="text" class="form-control form-control-sm" placeholder="Déclinaison" aria-label="Déclinaison" aria-describedby="d">
+              <input type="text" class="form-control form-control-sm" placeholder="Déclinaison" aria-label="Déclinaison" aria-describedby="d" id="d" name="d">
               <div class="input-group-append">
                 <div class="input-group-text" id="d">°</div>
               </div>
@@ -38,7 +38,7 @@
               <button type="button" class="btn btn-secondary btn-sm"><i class="fas fa-step-backward"></i></button>
             </div>
             <div class="input-group">
-              <input type="text" class="form-control form-control-sm" placeholder="Horaire" aria-label="Horaire" aria-describedby="h">
+              <input type="text" class="form-control form-control-sm" placeholder="Horaire" aria-label="Horaire" aria-describedby="h" id="h" name="h">
               <div class="input-group-append">
                 <div class="input-group-text" id="h">°</div>
               </div>
@@ -50,32 +50,17 @@
           </div>
         </div>
       </div>
-    </form>
-  </div>
-
-  <form>
-    <div class="row">
-      <div class="col-xs-6">
-          <div class="form-group">
-            <label for="d">Axe de déclinaison</label>
-            <input type="text" class="form-control" id="d" name="d" placeholder="Déclinaison">
+      <div class="row mt-1">
+        <div class="col">
+          <div class="btn-toolbar mb-3">
+            <div class="btn-group mr-2 btn-group-sm">
+              <button type="submit" class="btn btn-secondary btn-sm" name="submit" id="submit">GOTO</button>
+            </div>
           </div>
-      </div>
-      <div class="col-xs-6">
-          <div class="form-group">
-            <label for="h">Axe horaire</label>
-            <input type="text" class="form-control" id="h" name="h" placeholder="horaire">
-          </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <div class="form-group">
-          <button type="submit" name="submit" id="submit" class="btn btn-default">Déplacer le téléscope</button>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 
 <?php else: ?>
 

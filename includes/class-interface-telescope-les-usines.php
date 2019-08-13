@@ -70,7 +70,7 @@ class Interface_Telescope_Les_Usines {
 		if ( defined( 'INTERFACE_TELESCOPE_LES_USINES_VERSION' ) ) {
 			$this->version = INTERFACE_TELESCOPE_LES_USINES_VERSION;
 		} else {
-			$this->version = '1.0.6';
+			$this->version = '1.0.7';
 		}
 		$this->plugin_name = 'interface-telescope-les-usines';
 
