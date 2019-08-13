@@ -10,7 +10,6 @@
       e.preventDefault();
 
       var interfaceTelescopeLesUsinesSubmit = ajax_interface_telescope_les_usines_submit.url;
-      //var interfaceTelescopeLesUsinesSubmit = "http://86.217.221.175:8081/motors/goto/eqt/deg";
       var interfaceTelescopeLesUsinesSubmitNonce = ajax_interface_telescope_les_usines_submit.nonce;
       var data = $(this).serialize();
 

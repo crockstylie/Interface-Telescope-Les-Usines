@@ -30,6 +30,6 @@ class Interface_Telescope_Les_Usines_Submit {
 		$result = file_get_contents($url, false, $context);
 		if ($result === FALSE) { /* Handle error */ }
 
-		var_dump($result);
+		//var_dump($result);
 	}
 }

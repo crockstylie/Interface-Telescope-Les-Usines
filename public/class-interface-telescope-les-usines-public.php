@@ -59,17 +59,24 @@ class Interface_Telescope_Les_Usines_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+		/*************
+		 * BOOTSTRAP *
+		 *************/
+		wp_enqueue_style(
+			$this->plugin_name . "-bootstrap",
+			"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+			array(),
+			'4.3.1',
+			'all'
+		);
+
+		wp_enqueue_style(
+			$this->plugin_name . "-fontawesome",
+			"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+			array(),
+			'4.7.0',
+			'all'
+		);
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/interface-telescope-les-usines-public.css', array(), $this->version, 'all' );
 
@@ -82,17 +89,24 @@ class Interface_Telescope_Les_Usines_Public {
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
+		/*************
+		 * BOOTSTRAP *
+		 *************/
+		wp_enqueue_script(
+			$this->plugin_name . "-popper",
+			"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js",
+			array('jquery'),
+			'1.14.7',
+			false
+		);
+
+		wp_enqueue_script(
+			$this->plugin_name . "-bootsrap",
+			"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js",
+			array('jquery'),
+			'4.3.1',
+			false
+		);
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/interface-telescope-les-usines-public.js', array( 'jquery' ), $this->version, false );
 
