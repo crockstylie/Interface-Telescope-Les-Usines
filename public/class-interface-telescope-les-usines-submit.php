@@ -20,8 +20,12 @@ class Interface_Telescope_Les_Usines_Submit {
 			'h' =>  $_POST['h'],
 		];
 
-		//$url = 'http://86.217.221.175:8081/motors/goto/eqt/deg';
-		$url = 'http://78.206.32.41:8081/motors/goto/eqt/deg';
+		$data = json_encode($data);
+
+		// IP Simon
+		$url = 'http://86.217.221.175:8081/motors/goto/eqt/deg';
+		// IP les usines
+		//$url = 'http://78.206.32.41:8081/motors/goto/eqt/deg';
 
 		$method = 'POST';
 
@@ -30,8 +34,9 @@ class Interface_Telescope_Les_Usines_Submit {
 			case "POST":
 				curl_setopt($curl, CURLOPT_POST, 1);
 
-				if ($data)
+				if ($data) {
 					curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+				}
 				break;
 			case "PUT":
 				curl_setopt($curl, CURLOPT_PUT, 1);
@@ -41,16 +46,12 @@ class Interface_Telescope_Les_Usines_Submit {
 					$url = sprintf("%s?%s", $url, http_build_query($data));
 		}
 
-		curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: multipart/form-data'));
+		curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 		curl_setopt($curl, CURLOPT_URL, $url);
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
 		$result = curl_exec($curl);
 
 		curl_close($curl);
-
-		//return $result;
-
-		//wp_send_json($result);
 	}
 }
