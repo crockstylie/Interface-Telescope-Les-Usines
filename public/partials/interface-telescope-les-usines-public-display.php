@@ -1,7 +1,8 @@
 <?php if(current_user_can('administrator')): ?>
 
   <div class="container mt-3">
-    <form id="interfaceTelescopeLesUsinesForm">
+
+    <form id="switch-on-motors">
       <div class="row">
         <div class="col">
           <div class="custom-control custom-switch">
@@ -10,6 +11,9 @@
           </div>
         </div>
       </div>
+    </form>
+
+    <form id="goto">
       <div class="row mt-3">
         <div class="col">
           <div class="btn-toolbar mb-3">
@@ -57,6 +61,17 @@
               <button type="submit" class="btn btn-secondary btn-sm" name="submit" id="submit">GOTO</button>
             </div>
           </div>
+        </div>
+      </div>
+    </form>
+
+    <form id="captureDeLimage">
+      <div class="row">
+        <div class="col" id="capture-img">
+          <img src="" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="btn-group mr-2 btn-group-sm">
+          <button type="submit" class="btn btn-secondary btn-sm" name="capture-button" id="capture-button">CAPTURER L'IMAGE</button>
         </div>
       </div>
     </form>

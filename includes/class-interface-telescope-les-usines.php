@@ -182,6 +182,7 @@ class Interface_Telescope_Les_Usines {
 		// Form Submit
 		$interface_telescope_les_usines_ajax_submit = new Interface_Telescope_Les_Usines_Submit($this->get_plugin_name(), $this->get_version());
 		$this->loader->add_action( 'wp_ajax_interface_telescope_les_usines_submit', $interface_telescope_les_usines_ajax_submit, 'interface_telescope_les_usines_submit' );
+		$this->loader->add_action( 'wp_ajax_capture_submit', $interface_telescope_les_usines_ajax_submit, 'capture_submit' );
 
 	}
 

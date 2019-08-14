@@ -120,6 +120,15 @@ class Interface_Telescope_Les_Usines_Public {
 				'nonce' => wp_create_nonce('ajax-nonce')
 			)
 		);
+
+		wp_localize_script(
+			$this->plugin_name,
+			'ajax_capture_submit',
+			array(
+				'url' => admin_url( 'admin-ajax.php' ),
+				'nonce' => wp_create_nonce('ajax-nonce')
+			)
+		);
 	}
 
 }
